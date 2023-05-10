@@ -13,7 +13,7 @@ conn = scratchattach.login(USERNAME, PASSWORD).connect_cloud(669020072)
 def on_set(event):
 	if not (event.user == "yippymishy") and not (event.user == 'd329'):
 		if (event.value == '232143'): # balance
-			conn.set_var("Cloud", scratchattach.Encoding.encode(event.user)+"80197519")
+			conn.set_var("Cloud", scratchattach.Encoding.encode(event.user)+"80197519") # user + "$0.0"
 			time.sleep(0.15)
 			randy = random.randint(9999999,99999999)
 			conn.set_var("Cloud", scratchattach.Encoding.encode(f"give&{event.user}$report-this-glitch-by-commenting-{randy}-$yippymishy${randy}&0"))
